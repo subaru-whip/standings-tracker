@@ -1,5 +1,5 @@
 :root {
-  --lime: #d7ff1e;
+  --header-bg: #ff7db0;
   --cyan: #00e5ff;
   --pink: #ff1e8e;
   --sky: #a5d4e6;
@@ -23,7 +23,7 @@ body {
 /* ---------- header ---------- */
 
 header.hero {
-  background: var(--lime);
+  background: var(--header-bg);
   background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1.4px, transparent 1.4px);
   background-size: 16px 16px;
   border-bottom: 6px solid var(--ink);
