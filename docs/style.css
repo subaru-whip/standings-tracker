@@ -3,11 +3,8 @@
   --cyan: #00e5ff;
   --pink: #ff1e8e;
   --sky: #a5d4e6;
-  --gold: #ffd700;
-  --bronze: #ffa14a;
   --ink: #0a0a0a;
   --paper: #ffffff;
-  --muted: #5a5a5a;
   --caution: #fff2b8;
   --caution-border: #d7b400;
 }
@@ -109,13 +106,27 @@ main {
   color: var(--ink);
 }
 
+.team-card.rank-1,
+.team-card.rank-2,
+.team-card.rank-3 {
+  background-repeat: no-repeat;
+}
+
 .team-card.rank-1 {
-  background: var(--gold);
-  box-shadow: 6px 6px 0 var(--ink), 0 0 26px 4px rgba(255, 215, 0, 0.85);
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.95) 0 3px, transparent 4px),
+    radial-gradient(circle at 68% 12%, rgba(255, 255, 255, 0.9) 0 2px, transparent 3px),
+    radial-gradient(circle at 38% 55%, rgba(255, 255, 255, 0.95) 0 2.5px, transparent 3.5px),
+    radial-gradient(circle at 88% 48%, rgba(255, 255, 255, 0.85) 0 2px, transparent 3px),
+    radial-gradient(circle at 22% 82%, rgba(255, 255, 255, 0.9) 0 2px, transparent 3px),
+    radial-gradient(circle at 60% 88%, rgba(255, 255, 255, 0.85) 0 2px, transparent 3px),
+    radial-gradient(circle at 92% 85%, rgba(255, 255, 255, 0.8) 0 2px, transparent 3px),
+    linear-gradient(135deg, #b8860b 0%, #ffe066 25%, #fff8d6 50%, #f2c94c 75%, #a8720a 100%);
+  box-shadow: 6px 6px 0 var(--ink), 0 0 28px 5px rgba(255, 215, 0, 0.9);
 }
 
 .team-card.rank-2 {
-  background:
+  background-image:
     radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.95) 0 3px, transparent 4px),
     radial-gradient(circle at 68% 12%, rgba(255, 255, 255, 0.9) 0 2px, transparent 3px),
     radial-gradient(circle at 38% 55%, rgba(255, 255, 255, 0.95) 0 2.5px, transparent 3.5px),
@@ -128,8 +139,16 @@ main {
 }
 
 .team-card.rank-3 {
-  background: var(--bronze);
-  box-shadow: 6px 6px 0 var(--ink), 0 0 20px 3px rgba(255, 161, 74, 0.85);
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(255, 240, 225, 0.9) 0 3px, transparent 4px),
+    radial-gradient(circle at 68% 12%, rgba(255, 240, 225, 0.85) 0 2px, transparent 3px),
+    radial-gradient(circle at 38% 55%, rgba(255, 240, 225, 0.9) 0 2.5px, transparent 3.5px),
+    radial-gradient(circle at 88% 48%, rgba(255, 240, 225, 0.8) 0 2px, transparent 3px),
+    radial-gradient(circle at 22% 82%, rgba(255, 240, 225, 0.85) 0 2px, transparent 3px),
+    radial-gradient(circle at 60% 88%, rgba(255, 240, 225, 0.8) 0 2px, transparent 3px),
+    radial-gradient(circle at 92% 85%, rgba(255, 240, 225, 0.75) 0 2px, transparent 3px),
+    linear-gradient(135deg, #7a3d10 0%, #d4783a 25%, #ffcfa0 50%, #c9743a 75%, #6e360d 100%);
+  box-shadow: 6px 6px 0 var(--ink), 0 0 26px 5px rgba(255, 161, 74, 0.9);
 }
 
 .team-card .rank-badge {
