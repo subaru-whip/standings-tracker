@@ -52,6 +52,18 @@ class TestParser(unittest.TestCase):
         self.assertEqual(p.department, "Unknown")
         self.assertFalse(p.date_from_filename)
 
+    def test_kc_alias_no_space_dash_format(self):
+        p = self.parse("7.13-KC-Aeroial IMG_6157.jpeg")
+        self.assertEqual(p.person, "Kristi")
+        self.assertEqual(p.department, "Aeroial")
+        self.assertEqual(p.date, "7/13")
+
+    def test_william_macom_alias_no_date_no_dept(self):
+        p = self.parse("William Macom IMG_2204.jpeg")
+        self.assertEqual(p.person, "Bill")
+        self.assertEqual(p.department, "Unknown")
+        self.assertFalse(p.date_from_filename)
+
     def test_lowercase_name_matches_canonical_casing(self):
         p = self.parse("7.13 - glenn - Sound City IMG_5217.jpeg")
         self.assertEqual(p.person, "Glenn")
@@ -79,13 +91,13 @@ class TestParser(unittest.TestCase):
         p2 = self.parse("7.13 - glenn - Sound City IMG_5218.jpeg")
         self.assertNotEqual(p1.dedup_key, p2.dedup_key)
 
-    def test_unmatched_broken_separator_lolo(self):
+    def test_lolo_alias_broken_separator_routes_to_laura(self):
         p = self.parse(
             "LOLO - 07[]12 - Airport pictures "
             "15CC6387-BCEF-4686-A0DC-B2654EEEBC2B_1_105_c.jpeg"
         )
-        self.assertIsNone(p.person)
-        self.assertEqual(p.unmatched_guess, "LOLO")
+        self.assertEqual(p.person, "Laura")
+        self.assertIsNone(p.unmatched_guess)
         self.assertEqual(p.department, "Airport pictures")
         self.assertEqual(p.date, "7/12")
         self.assertTrue(p.date_from_filename)
