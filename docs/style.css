@@ -1,0 +1,198 @@
+:root {
+  --cream: #fbf3e3;
+  --teal: #1f6f76;
+  --teal-dark: #17565c;
+  --amber: #f2a541;
+  --coral: #ff7a5c;
+  --ink: #2b2422;
+  --muted: #6b5f56;
+  --gold: #e7b93f;
+  --silver: #b9c0c6;
+  --bronze: #c98a52;
+  --amber-panel: #fff3dd;
+  --amber-border: #e7b93f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+header.hero {
+  background: linear-gradient(120deg, var(--amber), var(--coral));
+  color: #fff;
+  padding: 2.5rem 1.5rem 3rem;
+  border-radius: 0 0 28px 28px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+header.hero h1 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  letter-spacing: 0.02em;
+}
+
+header.hero p {
+  margin: 0;
+  opacity: 0.92;
+  font-size: 1rem;
+}
+
+main {
+  max-width: 1080px;
+  margin: -1.75rem auto 0;
+  padding: 0 1.25rem 3rem;
+}
+
+.leaderboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.1rem;
+  margin-top: 1rem;
+}
+
+.team-card {
+  background: var(--teal);
+  color: #fff;
+  border-radius: 18px;
+  padding: 1.25rem 1.3rem 1rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  border-top: 6px solid var(--teal-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card.rank-1 { border-top-color: var(--gold); }
+.team-card.rank-2 { border-top-color: var(--silver); }
+.team-card.rank-3 { border-top-color: var(--bronze); }
+
+.team-card .flourish {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.9rem;
+  opacity: 0.35;
+}
+
+.team-card .rank-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-card h2 {
+  margin: 0 0 0.15rem;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  padding-right: 2.2rem;
+}
+
+.team-card .total {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin: 0.15rem 0 0.6rem;
+}
+
+.team-card .total span {
+  font-size: 0.95rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+.team-card details summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.member-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.4rem 0;
+}
+
+.member-row .name {
+  flex: 0 0 92px;
+  font-size: 0.88rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.member-row .meter {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.member-row .meter > span {
+  display: block;
+  height: 100%;
+  background: #fff;
+  border-radius: 999px;
+}
+
+.member-row .count {
+  flex: 0 0 auto;
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.unmatched-panel {
+  margin-top: 2rem;
+  background: var(--amber-panel);
+  border: 1px solid var(--amber-border);
+  border-radius: 14px;
+  padding: 1rem 1.3rem;
+}
+
+.unmatched-panel summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.unmatched-panel ul {
+  margin: 0.8rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.88rem;
+  color: var(--ink);
+}
+
+.unmatched-panel li {
+  margin-bottom: 0.35rem;
+}
+
+.unmatched-panel code {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 0.05rem 0.3rem;
+  border-radius: 4px;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 480px) {
+  header.hero { padding: 2rem 1rem 2.5rem; }
+  .team-card h2 { font-size: 1.05rem; }
+}

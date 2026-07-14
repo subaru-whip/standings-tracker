@@ -1,0 +1,20 @@
+{
+  "teams": [
+    { "members": ["Kristi", "Dan", "Glenn"] },
+    { "members": ["Laina", "Norman", "Marcelinton"] },
+    { "members": ["Maddy", "Louis", "Seleia"] },
+    { "members": ["Jen", "Sophie", "Harry"] },
+    { "members": ["Maddie", "Sy", "Lauren"] },
+    { "members": ["Laura", "Kyana", "Brodie"] },
+    { "members": ["Marissa", "Amy", "Jefferson"] },
+    { "members": ["Bill", "Katie", "Luke"] },
+    { "members": ["Alison", "Emily", "Tam"] },
+    { "members": ["Alice", "Skye", "Tom"] },
+    { "members": ["Talia", "Ally", "Joe"] },
+    { "members": ["Calder", "Carolyn", "JP"] }
+  ],
+  "aliases": {
+    "Laina Stapleton": "Laina",
+    "SophieObe": "Sophie"
+  }
+}
